@@ -41,10 +41,9 @@ kubectl apply -f ./my-juice-shop.yaml -n  my-juice-shop
 
 ## Dashboard setup
 
-To setup Grafasna dashboard, please follow [official guide](https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#grafana). 
+To setup Grafana dashboard, please follow [official guide](https://kubernetes.github.io/ingress-nginx/user-guide/monitoring/#grafana). 
 
 ![dashboard](grafana.png)
-
 
 ## Usage
 
@@ -64,4 +63,3 @@ Scan for OWASP vulnerabilities
 ```sh
 docker run -t owasp/zap2docker-stable zap-full-scan.py -t http://my-juice-shop.local
 ```
-
