@@ -53,7 +53,7 @@ Add my-juice-shop.local record with minikube ip to your hosts file
 sudo echo "$(minikube ip)  my-juice-shop.local" /etc/hosts
 ```
 
-You can access my juice shop on http://my-juice-shop.local or https://my-juice-shop.local
+You can access my juice shop on https://my-juice-shop.local
 
 > **Note**  
 > Certificate will not be valid
@@ -63,3 +63,9 @@ Scan for OWASP vulnerabilities
 ```sh
 docker run -t owasp/zap2docker-stable zap-full-scan.py -t http://my-juice-shop.local
 ```
+
+## To do
+
+- Deploy [cert-manager](https://cert-manager.io/docs/configuration/acme/) for certificate provisioning with Letsencrypt.org
+- Automate Grafana dashboard upload
+- Configure [Security Context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) for pods
